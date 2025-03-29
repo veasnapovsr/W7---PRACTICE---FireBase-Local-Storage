@@ -13,19 +13,24 @@ class BlaError extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         body: Padding(
-      padding: const EdgeInsets.only(left: BlaSpacings.m, right: BlaSpacings.m, top: BlaSpacings.s),
+      padding: const EdgeInsets.only(
+          left: BlaSpacings.m, right: BlaSpacings.m, top: BlaSpacings.s),
       child: Center(
-        child: Column(
-          children: [
-            Image.asset(
-              blablaWifiImagePath,
-              fit: BoxFit.none, // Adjust image fit to cover the container
-            ),
-            Text(
-              message,
-              style: BlaTextStyles.heading.copyWith(color: BlaColors.textNormal),
-            ),
-          ],
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Image.asset(
+                blablaWifiImagePath,
+                fit: BoxFit.none, // Adjust image fit to cover the container
+              ),
+              Text(
+                message,
+                style:
+                    BlaTextStyles.heading.copyWith(color: BlaColors.textNormal),
+              ),
+            ],
+          ),
         ),
       ),
     ));

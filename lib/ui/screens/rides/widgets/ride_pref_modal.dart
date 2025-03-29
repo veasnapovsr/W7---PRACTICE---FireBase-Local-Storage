@@ -21,6 +21,7 @@ class _RidePrefModalState extends State<RidePrefModal> {
 
   void onSubmit(RidePreference newPreference) {
     Navigator.of(context).pop(newPreference);
+    print(newPreference);
   }
 
   @override
